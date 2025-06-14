@@ -1,11 +1,11 @@
 {
-    "name": "flowise",
+    "name": "expy",
     "version": "3.0.2",
     "private": true,
-    "homepage": "https://flowiseai.com",
+    "homepage": "https://expy.ai",
     "workspaces": [
         "packages/*",
-        "flowise",
+        "expy",
         "ui",
         "components",
         "api-documentation"
@@ -13,7 +13,11 @@
     "scripts": {
         "build": "turbo run build",
         "build-force": "pnpm clean && turbo run build --force",
-        "dev": "turbo run dev --parallel --no-cache",
+        "dev": "cd packages/api && pnpm dev",
+        "dev:ui": "cd packages/ui && pnpm dev",
+        "dev:server": "cd packages/server && pnpm dev",
+        "dev:api": "cd packages/api && pnpm dev",
+        "dev:web": "cd packages/web && pnpm dev",
         "start": "run-script-os",
         "start:windows": "cd packages/server/bin && run start",
         "start:default": "cd packages/server/bin && ./run start",
@@ -31,7 +35,10 @@
         "lint-fix": "pnpm lint --fix",
         "quick": "pretty-quick --staged",
         "postinstall": "husky install",
-        "migration:create": "pnpm typeorm migration:create"
+        "migration:create": "pnpm typeorm migration:create",
+        "git-fetch": "git fetch upstream",
+        "git-merge": "git merge upstream/main",
+        "git-push": "git push origin main"
     },
     "lint-staged": {
         "*.{js,jsx,ts,tsx,json,md}": "eslint --fix"

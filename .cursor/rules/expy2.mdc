@@ -1,0 +1,22 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+i am migrating from using js to ts in my ui
+ui is react project not next project
+i am migrating from mui and matirial to shadcn and lucide with modern design 
+the old pages are in /packages/ui/src/views
+the new pages are in /packages/ui/src/pages
+the old components are in /packages/ui/ui-component
+the new components are in /packages/ui/components
+the shadcn components are in /packages/ui/components/ui
+the old layouts are in /packages/ui/layout
+the new layouts are in /packages/ui/components/layout
+/packages/ui is my old frontend at port 8080
+/packages/server is my backend at port 3000
+I already have the pnpm dev running Executing the command npm run dev will interrupt the server process causing the app to crash.
+do not hallucinate new configs or new api endpoints already in project in @/api @/hooks @/utils @/routes @/lib @/store
+do not claim perfect or success without testing 
+always check missing imports and linter errors 
+use pnpm not npm
